@@ -1,0 +1,7 @@
+/* App-level styles - minimal */
+
+#root {
+  min-height: 100vh;
+  background-color: #0d1117;
+}
+
