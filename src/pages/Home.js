@@ -24,13 +24,13 @@ function Home() {
             <a href="https://erelo.substack.com/" target="_blank" rel="noopener noreferrer">
               [blog]
             </a>
-            <a href="/Erel_Ozen_Resume.pdf" target="_blank" rel="noopener noreferrer">
-              [cv]
+            <a href="/Erel_Ozen_Resume_2027.pdf" target="_blank" rel="noopener noreferrer">
+              [resume]
             </a>
           </span>
           <span className="separator">|</span>
           <span className="social-icons">
-            <a href="mailto:erelozen@gmail.com" aria-label="Email">
+            <a href="mailto:erel.ozen.swe@gmail.com" aria-label="Email">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
@@ -60,20 +60,25 @@ function Home() {
               <span className="prompt-text">whoami</span>
             </h2>
             <div className="about-content">
+              <img 
+                src="/profile.jpg" 
+                alt="Erel Ozen" 
+                className="profile-pic"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
               <div className="about-text">
                 <p>
                   I'm a <span className="highlight">B.S./M.S. '27 Computer Science student at Georgia Tech</span>{" "}
                   (<span className="highlight">4.0 GPA</span>), specializing in{" "}
-                  <span className="highlight">Systems Architecture and Machine Intelligence</span>.
+                  <span className="highlight">Intelligence and System Architecture</span>.
                 </p>
                 <p>
-                  I'm passionate about building high-performance, scalable systems and ML applications. I've interned at{" "}
-                  <span className="highlight">Apple</span> in the{" "}
-                  <span className="highlight">CoreOS group</span>, where I engineered state management logic for paravirtualized network drivers. I've also worked at{" "}
-                  <span className="highlight">OKSI</span>, deploying Llama-3 on resource-constrained devices.
+                  I'm passionate about building high-performance, scalable systems. I am a <span className="highlight">Research Assistant at the Systems for AI Lab at Georgia Tech</span>, where I build distributed LLM serving systems and optimize prefix caching.
                 </p>
                 <p>
-                  My academic projects include building a <span className="highlight">UNIX OS kernel from scratch</span>, implementing virtual memory, a file system, and CPU scheduling. I am also a TA for Computer Organizations & Programming.
+                  Previously, I interned at <span className="highlight">Apple</span> in the <span className="highlight">CoreOS group</span>, where I architected an AI triage tool for 1600+ engineers and engineered state management logic for paravirtualized network drivers. I also interned at <span className="highlight">OKSI</span>, deploying Llama-3 on resource-constrained devices, which contributed to a $1.5M DARPA contract renewal.
                 </p>
               </div>
             </div>
@@ -88,11 +93,15 @@ function Home() {
             </h2>
             <ul className="experience-list">
               <li>
-                <span className="year">2025</span>{" "}
-                <span className="experience-text">Software Development Engineering Intern @ Apple</span>
+                <span className="year">2025 - Current</span>{" "}
+                <span className="experience-text">Research Assistant @ Systems for AI Lab, Georgia Tech</span>
               </li>
               <li>
-                <span className="year">2024-2025</span>{" "}
+                <span className="year">2025</span>{" "}
+                <span className="experience-text">Software Engineering Intern @ Apple</span>
+              </li>
+              <li>
+                <span className="year">2024 - 2025</span>{" "}
                 <span className="experience-text">Software Engineering Intern, Machine Learning @ OKSI</span>
               </li>
               <li>
@@ -112,22 +121,17 @@ function Home() {
             <ul className="projects-list">
               <li>
                 <span className="project-prefix">::</span>{" "}
-                <span className="project-title">ereLLM:</span>{" "}
-                <span className="project-description">Lightweight Transformer for Scalable Training Implemented a minimal GPT architecture in PyTorch, optimized with CUDA for scalable training and fine-tuning on custom datasets.</span>
+                <span className="project-title">Vidur: Autoscaling LLM Inference Simulator</span>{" "}
+                <span className="project-description">Implemented reactive autoscaling policies for distributed LLM inference, optimized $O(1)$ traffic envelope algorithms, and developed a LOR scheduler to minimize latency.</span>
               </li>
               <li>
                 <span className="project-prefix">::</span>{" "}
-                <span className="project-title">UNIX Kernel Development (Spring 2025)</span>{" "}
-                <span className="project-description">Implemented core OS components for a UNIX V6-based teaching OS in C, including virtual memory, file system, and CPU scheduling.</span>
+                <span className="project-title">UNIX Kernel Development</span>{" "}
+                <span className="project-description">Implemented core OS components for a UNIX V6-based teaching OS in C, including virtual memory management, file system, and CPU scheduling.</span>
               </li>
               <li>
                 <span className="project-prefix">::</span>{" "}
-                <span className="project-title">Founding Engineer @ Stealth Startup (2024)</span>{" "}
-                <span className="project-description">Developed an ML recommendation engine analyzing 300+ credit-cards and built the MERN stack application.</span>
-              </li>
-              <li>
-                <span className="project-prefix">::</span>{" "}
-                <span className="project-title">Engineering Team Member @ Fintech Georgia Tech (2023 - 2024)</span>{" "}
+                <span className="project-title">Fintech @ Georgia Tech</span>{" "}
                 <span className="project-description">Created a credit card "smart-wallet" using React and Node.js to dynamically select the best card based on purchase type.</span>
               </li>
             </ul>
@@ -143,15 +147,15 @@ function Home() {
             <ul className="skills-list">
               <li>
                 <span className="skill-category">Languages:</span>{" "}
-                <span className="skill-items">Python, C/C++, Java, JavaScript, TypeScript, Bash</span>
+                <span className="skill-items">Python, C/C++, Java, Go, JavaScript, TypeScript, Bash, SQL, x86 Assembly</span>
               </li>
               <li>
                 <span className="skill-category">Frameworks:</span>{" "}
-                <span className="skill-items">TensorFlow, PyTorch, ROS/ROS2, OpenCV, React.JS, React Native, NATS.io</span>
+                <span className="skill-items">TensorFlow, PyTorch, ROS/ROS2, OpenCV, CUDA, LLVM, Triton, CUTLASS, JAX, XLA, Kubernetes, ReactJS, React Native, NATS.io, vLLM, Node.js, Express.js</span>
               </li>
               <li>
                 <span className="skill-category">Technologies:</span>{" "}
-                <span className="skill-items">RESTful APIs, AWS, Git, Docker, SLAM, CAN, Micro Controllers</span>
+                <span className="skill-items">RESTful APIs, AWS, Git, Docker, GenAI, LLM Inference/Serving, Quantization, Autoscaling, Distributed Systems, Virtualization, CI/CD, Concurrency, SLAM, CAN, Micro Controllers, LoRA</span>
               </li>
             </ul>
           </div>
