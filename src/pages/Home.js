@@ -151,7 +151,7 @@ function Home() {
               </li>
               <li>
                 <span className="skill-category">Frameworks:</span>{" "}
-                <span className="skill-items">TensorFlow, PyTorch, ROS/ROS2, OpenCV, CUDA, LLVM, Triton, CUTLASS, JAX, XLA, Kubernetes, ReactJS, React Native, NATS.io, vLLM, Node.js, Express.js</span>
+                <span className="skill-items">TensorFlow, PyTorch, ROS/ROS2, OpenCV, CUDA, LLVM, Triton, CUTLASS, JAX, XLA, Kubernetes, Matplotlib, ReactJS, React Native, NATS.io, JUnits, pySerial, HF Transformers, vLLM, Node.js, Express.js, pytest</span>
               </li>
               <li>
                 <span className="skill-category">Technologies:</span>{" "}
